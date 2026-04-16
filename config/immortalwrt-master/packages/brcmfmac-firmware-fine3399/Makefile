@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=brcmfmac-firmware-fnet3399
+PKG_NAME:=brcmfmac-firmware-fine3399
 
 PKG_SOURCE_URL:=https://github.com/yizhanghong/rk3399-firmware.git
 PKG_SOURCE_PROTO:=git
@@ -9,18 +9,18 @@ PKG_MIRROR_HASH:=skip
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/brcmfmac-firmware-fnet3399
+define Package/brcmfmac-firmware-fine3399
   SECTION:=firmware
   CATEGORY:=Firmware
   URL:=https://github.com/ophub/firmware.git
-  TITLE:=Fnet3399 BCM43430b0 Firmware
+  TITLE:=Fine3399 BCM43430b0 Firmware
 endef
 
 define Build/Compile
 	true
 endef
 
-define Package/brcmfmac-firmware-fnet3399/install
+define Package/brcmfmac-firmware-fine3399/install
 	$(INSTALL_DIR) $(1)/lib/firmware/brcm
 	$(INSTALL_DATA) \
 		$(PKG_BUILD_DIR)/firmware/brcm/BCM43430B0.hcd \

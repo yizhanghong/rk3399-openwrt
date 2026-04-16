@@ -37,7 +37,7 @@ cp -a $GITHUB_WORKSPACE/config/immortalwrt-master/packages/* package/firmware/
 cp -f $GITHUB_WORKSPACE/config/immortalwrt-master/opwifi package/base-files/files/etc/init.d/opwifi
 chmod 755 package/base-files/files/etc/init.d/opwifi
 echo "
-CONFIG_PACKAGE_brcmfmac-firmware-fnet3399=y
+CONFIG_PACKAGE_brcmfmac-firmware-fine3399=y
 " >> .config
 
 # add luci-app-fancontrol
