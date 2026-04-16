@@ -21,13 +21,12 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "fnet3399"
+        default: "fine3399"
         type: choice
         options:
           - fine3399_tpm312_xiaobao_zysj
           - fine3399_xiaobao
           - fine3399
-          - fnet3399
           - fmx1-pro
           - king3399
           - sw799
