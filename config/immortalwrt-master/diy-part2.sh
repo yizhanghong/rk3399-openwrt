@@ -46,8 +46,8 @@ CONFIG_PACKAGE_brcmfmac-firmware-fine3399=y
 echo "
 CONFIG_PACKAGE_luci-app-fancontrol=y
 " >> .config
-sed -i "s/hwmon9/hwmon2/g" feeds/fancontrol/luci-app-fancontrol/htdocs/luci-static/resources/view/fancontrol.js
-sed -i "s/hwmon9/hwmon2/g" feeds/fancontrol/fancontrol/files/fancontrol.config
+sed -i "s/hwmon9/hwmon2/g" package/fancontrol/luci-app-fancontrol/htdocs/luci-static/resources/view/fancontrol.js
+sed -i "s/hwmon9/hwmon2/g" package/fancontrol/fancontrol/files/fancontrol.config
 
 # add qmodem
 #echo 'src-git qmodem https://github.com/FUjr/QModem.git;main' >> feeds.conf.default
