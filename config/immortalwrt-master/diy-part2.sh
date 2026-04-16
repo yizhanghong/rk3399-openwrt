@@ -30,7 +30,6 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
 # ------------------------------- Other ends -------------------------------
-$GITHUB_WORKSPACE/config/immortalwrt-master/Packages.sh
 
 # 集成wifi
 cp -a $GITHUB_WORKSPACE/config/immortalwrt-master/packages/* package/firmware/

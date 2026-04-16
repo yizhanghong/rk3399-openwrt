@@ -107,6 +107,7 @@ env:
   CONFIG_FILE: config/${{ inputs.source_branch }}/config
   DIY_P1_SH: config/${{ inputs.source_branch }}/diy-part1.sh
   DIY_P2_SH: config/${{ inputs.source_branch }}/diy-part2.sh
+  PKGS_SH: config/${{ inputs.source_branch }}/Packages.sh
   TZ: America/New_York
 
 jobs:
@@ -210,6 +211,15 @@ jobs:
 
       - name: Install feeds
         run: cd openwrt/ && ./scripts/feeds install -a
+
+      - name: Load custom packages
+        run: |
+          if [[ "${{ inputs.source_branch }}" == *"immortalwrt"* ]]; then
+              chmod +x ${PKGS_SH}
+              cd openwrt/
+              ${GITHUB_WORKSPACE}/${PKGS_SH}
+          fi
+
 
       - name: Load custom configuration
         run: |
