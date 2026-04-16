@@ -216,7 +216,7 @@ jobs:
         run: |
           if [[ "${{ inputs.source_branch }}" == *"immortalwrt"* ]]; then
               chmod +x ${PKGS_SH}
-              cd openwrt/
+              cd openwrt/package/
               ${GITHUB_WORKSPACE}/${PKGS_SH}
           fi
 
@@ -226,7 +226,7 @@ jobs:
           [[ -d "files" ]] && mv -f files openwrt/files
           [[ -e "${CONFIG_FILE}" ]] && cp -f ${CONFIG_FILE} openwrt/.config
           chmod +x ${DIY_P2_SH}
-          cd openwrt/package/
+          cd openwrt/
           ${GITHUB_WORKSPACE}/${DIY_P2_SH}
 
       - name: Download package
