@@ -56,28 +56,17 @@ sed -i "s/hwmon9/hwmon2/g" package/luci-app-fancontrol/fancontrol/files/fancontr
 #sed -i "s/CONFIG_PACKAGE_sms-tool/#CONFIG_PACKAGE_sms-tool/g" .config  
 #sed -i "s/CONFIG_PACKAGE_luci-app-modem/#CONFIG_PACKAGE_luci-app-modem/g" .config  
 #sed -i "s/CONFIG_PACKAGE_luci-app-sms-tool/#CONFIG_PACKAGE_luci-app-sms-tool/g" .config
-echo "
+echo " 
 CONFIG_PACKAGE_luci-i18n-qmodem-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-qmodem-hc-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-qmodem-mwan-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-qmodem-ru is not set
 CONFIG_PACKAGE_luci-i18n-qmodem-sms-zh-cn=y
 CONFIG_PACKAGE_luci-app-qmodem=y
 CONFIG_PACKAGE_luci-app-modem=n
 CONFIG_PACKAGE_luci-app-qmodem_INCLUDE_vendor-qmi-wwan=y
-# CONFIG_PACKAGE_luci-app-qmodem_INCLUDE_generic-qmi-wwan is not set
 CONFIG_PACKAGE_luci-app-qmodem_USE_TOM_CUSTOMIZED_QUECTEL_CM=y
-# CONFIG_PACKAGE_luci-app-qmodem_USING_QWRT_QUECTEL_CM_5G is not set
-# CONFIG_PACKAGE_luci-app-qmodem_USING_NORMAL_QUECTEL_CM is not set
-# CONFIG_PACKAGE_luci-app-qmodem_INCLUDE_ADD_PCI_SUPPORT=y
-# CONFIG_PACKAGE_luci-app-qmodem_INCLUDE_ADD_QFIREHOSE_SUPPORT is not set
-#CONFIG_PACKAGE_luci-app-qmodem-hc=y
-#CONFIG_PACKAGE_luci-app-qmodem-mwan=y
 CONFIG_PACKAGE_luci-app-qmodem-sms=y
-#CONFIG_PACKAGE_luci-app-qmodem-ttl=y
 CONFIG_PACKAGE_qmodem=y
-CONFIG_PACKAGE_quectel-CM-5G=y
 CONFIG_PACKAGE_quectel-CM-5G-M=y
+CONFIG_PACKAGE_luci-app-qmodem_INCLUDE_ndisc6=y
 " >> .config
 
 

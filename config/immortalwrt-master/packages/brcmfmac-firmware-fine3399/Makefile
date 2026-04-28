@@ -48,4 +48,4 @@ define Package/brcmfmac-firmware-fine3399/install
 		$(1)/lib/firmware/brcm/brcmfmac43430b0-sdio.rockchip,rk3399.txt
 endef
 
-$(eval $(call BuildPackage,brcmfmac-firmware-fnet3399))
+$(eval $(call BuildPackage,brcmfmac-firmware-fine3399))
